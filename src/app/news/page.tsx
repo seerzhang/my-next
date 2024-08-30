@@ -1,6 +1,5 @@
 import './index.scss'
 import type { Metadata } from 'next'
-// import { Button } from 'antd'
 import Header from '../components/Header'
 
 export const metadata: Metadata = {
@@ -16,17 +15,9 @@ export default async function Page() {
   let posts = await data.json()
   console.log(posts)
 
-  const primary = () => {
-    console.log(123)
-  }
 
   return <div>
     <p className="title">Hello, Next.js!</p>
     <Header/>
-    {/*<Button type="primary" onClick={ primary() }>Primary Button</Button>
-    <Button>Default Button</Button>
-    <Button type="dashed">Dashed Button</Button>
-    <Button type="text">Text Button</Button>
-    <Button type="link">Link Button</Button>*/}
   </div>
 }
